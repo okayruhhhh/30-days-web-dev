@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Name Greeting App by Ruhhh</title>
+	<style>
+		*{text-align:center;font-size:40px;margin:auto;font-family:Georgia;}
+		body{background-color:linen;}
+		h1{color:grey;}
+		h2{color:pink;}
+		
+	</style>
+	</head>
+	<body>
+		<br/>
+		<h1>Name Greeting App</h1>
+		<br/>
+		<form onsubmit="show()">
+			<input type="text" id="name" placeholder="Enter Your Name" style="width:50%;" />
+			<br/><br/>
+			<input type="submit" value="Submit"/>
+		</form>
+		<br/>
+		<h2 id="msg"></h2>
+
+		<script>
+			function show()
+			{
+			event.preventDefault();
+			let name=document.getElementById("name");
+			let msg=document.getElementById("msg");
+
+			if(name.value ==="")
+			{
+				alert("Name is Empty");
+				msg.innerHTML="";
+				name.focus();
+				return;
+			}
+			if(name.trim()==="")
+			{
+				alert("Name cannot be blank spaces");
+				msg.innerHTML="";
+				name.focus();
+				return;
+			}
+
+			let d= new Date();
+			let hr=d.getHours();
+			if(hr<12)
+				msg.innerHTML="GOOD MORNINGGGG, " + name.value + "!";
+			else if (hr<16)
+				msg.innerHTML="GOOD AFTERNOONNNN, " + name.value +"!";
+			else
+				msg.innerHTML="GOOD EVENINGGGG, " + name.value +"!";
+			}
+		</script>
+
+	</body>
+</html>
