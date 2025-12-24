@@ -6,7 +6,7 @@ This project focuses on understanding how user interactions can control the appe
 
 
 ## ✨ Features
-` Switch between ***Light***, ***Pastel***, ***Dark***, and ***Ocean*** themes
+~ Switch between ***Light***, ***Pastel***, ***Dark***, and ***Ocean*** themes
 ~ Displays the currently active theme
 ~ Instant visual feedback on button click
 
