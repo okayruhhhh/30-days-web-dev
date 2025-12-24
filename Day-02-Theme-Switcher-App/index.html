@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>THEME SWITCHER APP BY RUHHH</title>
+		<style>
+			*{text-align:center;font-size:40px;font-family:Georgia; margin:auto;color:#333333;}
+			body{background-color:seashell;}
+			.btn {width:30%;margin:2%; border-radius:18px;}
+			.btn:hover{color:#EAEFF2; background-color:black;}
+			h2{color:#333333}
+		</style>
+	</head>
+
+	<body>
+		<br/>
+		<h1>THEME SWITCHER APP</h1>
+		</br>
+		<button class="btn" onClick="colorMe('LIGHT')">LIGHT</button>
+		<button class="btn" onClick="colorMe('DARK')">DARK</button>
+		<button class="btn" onClick="colorMe('PASTEL')">PASTEL</button>
+		<button class="btn" onClick="colorMe('OCEAN')">OCEAN</button>
+
+			<h2 id="msg"></h2>
+			<script>
+				function colorMe(theme){
+					if(theme==="LIGHT")
+					{
+						document.body.style.backgroundColor="#F7F6D3";	
+						msg.innerHTML="Current Theme~>LIGHT"	
+					}
+					else if(theme==="DARK")
+					{
+						document.body.style.backgroundColor="#222222";
+						msg.innerHTML="Current Theme~>DARK"			
+					}
+					else if(theme==="PASTEL")
+					{
+						document.body.style.backgroundColor="#F9DFDF";	
+						msg.innerHTML="Current Theme~>PASTEL"	
+					}
+					else if(theme==="OCEAN")
+					{
+						document.body.style.backgroundColor="#cfe9ff";	
+						msg.innerHTML="Current Theme~>OCEAN"	
+					}
+			}
+			</script>
+
+		</form>
+	</body>
+</html>
