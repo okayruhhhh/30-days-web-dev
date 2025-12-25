@@ -12,10 +12,10 @@ This project focuses on understanding how user interactions can control the appe
 
 
 ## 🛠 Tech Used
-- HTML
-- CSS(Internal)
-- JavaScript
-- 
+~ HTML
+~ CSS(Internal)
+~ JavaScript
+ 
 
 ## 📚 Concepts Learned
 ~ DOM manipulation
