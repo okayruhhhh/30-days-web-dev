@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>PALINDROME CHECKER BY RUHHH</title>
+	
+		<link to rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<br/>
+		<div class="cont">
+		<h1 >->Palindrome Checker<-</h2><br/>
+		<form onsubmit="check()">
+			<label style="color:grey;font-size:30px;font-weight:bold">Enter the string</label><br/>
+			<input type="text" id="string" style="width:35%;font-size:30px;"/>
+			<br/><br/>
+			<input type="submit" value="Check" style="font-size:20px;border-radius:20%;width:20%;"/>
+		</form>
+		<h2 id="msg" style="color:grey;font-size:35px;"/><br/><br/>
+		</div>
+	</body>
+	<script>
+		function check()
+		{
+			event.preventDefault()
+			let str=document.getElementById("string");
+			let msg=document.getElementById("msg");
+		
+			if(str.value==="")
+			{
+				alert("String cannot not be empty!");
+				msg.innerHTML="";
+				str.focus()
+				return;	
+			}		
+			if(str.value.trim()==="")
+			{
+				alert("String cannot not be blankspaces!");
+				msg.innerHTML="";
+				str.value="";
+				str.focus();
+				return;	
+			}
+			let org=str.value;
+			let rev=org.split("").reverse().join("");
+			if (org===rev)
+				msg.innerHTML="String is a Palindrome!";
+			else 
+				msg.innerHTML="String is not a Palindrome";
+		}
+	</script>
+</html>
