@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>ANAGRAM CHECKER BY RUHHH</title>
+		<link rel="stylesheet" href="style.css" />
+
+	</head>
+	<body>
+		<div class="cont">
+		<h1>Anagram Checker App</h2><br/>
+		<form onsubmit="check()">
+			<label style="color:grey;font-size:27px;font-weight:bold">Enter the first string</label><br/>
+			<input type="text" id="string1" />
+			<br/><br/>
+			<label style="color:grey;font-size:27px;font-weight:bold">Enter the second string</label><br/>
+			<input type="text" id="string2" />
+			<br/><br/>
+			<input type="submit" value="Check"  style="font-size:20px;border-radius:20%;width:18%;"/>
+		</form>
+		<h2 id="msg"/>
+		</div>
+	</body>
+	<script>
+		function check()
+		{
+			event.preventDefault()
+			let s1=document.getElementById("string1");
+			let s2=document.getElementById("string2");
+			let msg=document.getElementById("msg");
+		
+			if(s1.value==="")
+			{
+				alert("String cannot not be empty!");
+				msg.innerHTML="";
+				s1.focus()
+				return;	
+			}		
+			if(s1.value.trim()==="")
+			{
+				alert("String cannot not be blankspaces!");
+				msg.innerHTML="";
+				s1.value="";
+				s1.focus();
+				return;	
+			}
+			if(s2.value==="")
+			{
+				alert("String cannot not be empty!");
+				msg.innerHTML="";
+				s2.focus()
+				return;	
+			}		
+			if(s2.value.trim()==="")
+			{
+				alert("String cannot not be blankspaces!");
+				msg.innerHTML="";
+				s2.value="";
+				s2.focus();
+				return;	
+			}
+			let str1=s1.value.toLowerCase().replace(/\s+/g, "").split("").sort().join("");
+			let str2=s2.value.toLowerCase().replace(/\s+/g, "").split("").sort().join("");
+
+			if (str1===str2)
+				{
+
+				msg.innerHTML=s1.value + " → " + str1 + "<br/>" + s2.value + " → " + str2  + "<br/>" +"Result : Strings are anagram of each other!";
+				}
+			else 
+				msg.innerHTML=s1.value + " → " + str1 + "<br/>" + s2.value + " → " + str2  + "<br/>" +"Result : Strings are not anagram of each other!";
+		}
+	</script>
+</html>
