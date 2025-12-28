@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>SORT STRING APP BY RUHHH</title>
+		<link rel="stylesheet" href="style.css" />
+	<body>
+		<div class="cont">
+		<h1>Sort String!</h2><br/>
+		<form onsubmit="check()">
+			<input type="text" id="string" placeholder="Enter some string"/>
+			<br/><br/>
+			<input type="submit" value="Sort it!"/>
+		</form>
+		<h2 id="msg"></h2>
+		<div class="fc">
+			<h3 id="info"></h3>
+		<div/>
+		<div/>
+		
+	</body>
+	<script>
+		function check()
+		{
+			event.preventDefault()
+			let str=document.getElementById("string");
+			let msg=document.getElementById("msg");
+
+		
+			if(str.value==="")
+			{
+				alert("String cannot not be empty!");
+				msg.innerHTML="";
+				info.innerHTML="";
+				str.focus()
+				return;	
+			}		
+			if(str.value.trim()==="")
+			{
+				alert("String cannot not be blankspaces!");
+				msg.innerHTML="";
+				info.innerHTML="";
+				str.value="";
+				str.focus();
+				return;	
+			}
+	
+
+			let vowels="aeiou";
+			let name=str.value.toLowerCase().replace(/\s+/g,"");
+			let sname=name.split("").sort().join("");
+	
+
+let vowelStr = "";
+let consonantStr = "";
+
+for (let i = 0; i < name.length; i++) {
+    let ch = name[i];
+
+    if (vowels.includes(ch)) {
+        vowelStr += ch + " ";
+    } else {
+        consonantStr += ch + " ";
+    }
+}
+
+			msg.innerHTML="Original : "+str.value+"<br/>Sorted : " +sname;
+			info.innerHTML="TOTAL CHARACTERS: " + name.length +"<br/>Vowels~> " +vowelStr+ "<br/>" +"Consonants~> " + consonantStr;
+		}
+	</script>
+</html>
