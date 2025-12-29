@@ -1,0 +1,6 @@
+*{font-size:50px; text-align:center; margin:auto; font-family:Georgia; }
+body{background-color:lavendar;}
+h1{color:#E75480;}
+h2{color:grey;font-size:36px;}
+p{font-size:20px;color:#333333;}
+input[type="submit"]{font-size:20px;border-radius:20%;width:18%;height:5%;cursor:hand;}

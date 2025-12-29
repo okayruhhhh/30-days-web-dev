@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Friends List Manager BY RUHHH</title>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<br/>
+		<h1>~ Friends List Manager! ~</h2><br/>
+		<form onsubmit="operation()">
+			<input type="submit" value="ADD" />
+			<input type="submit" value="REMOVE"/>
+			<input type="submit" value="SHOW" />
+			<br/><br/>
+			<p id="total"></p>
+			<hr style="width:30%;line-weight:bold;">
+		</form>
+			<h2 id="msg"></h2>
+			<br/><br/>
+	
+			
+			<script>
+			let friends=[];
+			function operation()
+			{
+				event.preventDefault()
+				let action=document.activeElement.value;
+				let msg=document.getElementById("msg");
+			
+				if(action==="ADD")
+				{
+					let n = prompt("Enter Name to be ADDED");
+					if(n.trim()!=="")
+					{
+						if(friends.indexOf(n)!==-1){
+							alert(n+" already exists in the list!");
+							return;	
+							}
+						friends.push(n);
+					}
+					
+				}		
+				else if(action==="REMOVE")
+				{
+					let n =prompt("Enter name to be REMOVED");	
+					if(n.trim()!=="")
+					{
+						let pos=friends.indexOf(n);
+						if(pos!==-1)
+						
+							friends.splice(pos,1);
+						else
+							alert(n + "Not Found!");	
+					}
+				}
+				else if(action==="SHOW")
+				{
+					let total=document.getElementById("total");
+
+					if(friends.length===0)	{
+						msg.innerHTML="No names in the list yet!";
+						total.innerHTML="(Total Friends:0)";
+						return;
+						}
+					msg.innerHTML="";
+					for(let i=0;i<friends.length;i++)
+					{
+						msg.innerHTML=friends.join(" • ");	
+					}
+					total.innerHTML="( Total Friends: " +friends.length+" )";
+				}
+			}		
+			
+		</script>
+	</body>
+</html>
