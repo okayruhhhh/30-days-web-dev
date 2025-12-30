@@ -1,0 +1,7 @@
+*{margin:auto;	text-align:center;	font-size:40px;	font-family:Georgia ;color:#2E1E0F}
+body{background-color:#2E1E0F}
+h1{color:#2E1E0F;}
+h2{color:#2E1E0F;}
+.fc{border:groove; padding:2%; width:60%; border-radius:30px;background-color:#A77464;}
+input[type=radio]{height:0.5em; width:2%; margin-left:50px;}
+input[type=text]{width:80%;}

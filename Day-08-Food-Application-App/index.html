@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>FOOD APPLICATION BY RUHHHH</title>
+		<link rel="stylesheet"	href="style.css"/>
+	</head>
+	<body>
+		<br/>
+		<div class=fc>
+		<h1>FOOD YOU LIKE</h1><br/>
+			<form onsubmit="show()">
+		
+			<input type="text" id="name" placeholder="Enter Your Name" />
+			<br/><br/>
+			<select id="food">
+				<option value="">-- Select your favorite food --</option>
+				<option value="North Indian">North Indian 🍛</option>
+				<option value="South Indian">South Indian 🥘</option>
+				<option value="Mexican">Mexican 🌮</option>
+				<option value="Italian">Italian 🍕</option>
+				<option value="Chinese">Chinese 🍜</option>
+				<option value="Thai">Thai 🍲</option>
+			</select>
+			<br/><br/>
+			<input type="submit"/>
+			</form>
+			<br/><br/>
+			<h2 id="msg"></h2>
+		</div>
+		<script>
+			function show(){
+				event.preventDefault();
+
+				let name=document.getElementById("name");
+				let food=document.getElementById("food");
+				let msg=document.getElementById("msg");
+		
+				if (name.value==="")
+				{
+					alert("PLEASE ENTER YOUR NAME!");
+					msg.innerHTML="";
+					name.focus();
+					name.value="";
+					return;
+				}
+				if (name.value.trim()==="")
+				{
+					alert("NAME CANNOT BE BLANK SPACES!");
+					msg.innerHTML="";
+					name.focus();
+					name.value="";
+					return;
+				}
+				if (!name.value.match(/^[A-Za-z]+$/))
+				{
+					alert("NAME SHOULD CONTAIN ONLY ALPHABETS!");
+					msg.innerHTML="";
+					name.focus();
+					name.value="";
+					return;
+				}
+				
+				let ans="Hiii "+name.value + ",You seem to love " +food.value+"food!";
+				msg.innerHTML=ans;
+			}
+		</script>
+
+	</body>
+</html>
