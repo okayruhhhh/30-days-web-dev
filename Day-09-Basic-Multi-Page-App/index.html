@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>EVEN ODD APP BY RUHHHH</title>
+		<link rel="stylesheet"	href="style.css"/>
+	</head>
+	<body>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+		</div>
+		<br/>
+		<h1>EVEN ODD APPLICATION!</h1>
+		<br/>
+		<div class="fc">
+			<form onsubmit="check()">
+				<input type="number" id="num" placeholder="Enter Integer " />
+				<br/><br/>
+				<input type="submit" value="CHECK"/>
+			</form>
+		<div>
+		<br/>
+		<h2 id="msg"></h2>
+		<br/>
+	</body>
+	<script>
+		function check()
+		{
+			event.preventDefault()
+			let num=document.getElementById("num")
+			let msg=document.getElementById("msg")
+	
+			if (num.value==="")
+			{
+				alert("Please enter integer")
+				msg.innerHTML="";
+				num.focus()
+				return;
+			}
+			let n=parseInt(num.value);
+			let ans=n%2===0?"EVEN":"ODD";
+			msg.innerHTML=num.value+" is "+ans;
+		}
+			
+			
+	</script>
+</html>
