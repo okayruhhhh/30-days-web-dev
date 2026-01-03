@@ -1,0 +1,37 @@
+<html>
+	<head>	
+		<title>SQUARE FINDER BY RUHHHH</title>
+		<link rel="stylesheet" href="css/mystyle.css">
+	</head>
+	<body>
+		<div class="nav">
+			<a href="index.html"> Home </a>
+			<a href="about.html"> About </a>
+		</div>
+		<br/>
+	<div>
+			<h1>RESULT PAGE</h1>
+			<br/>
+			<h3 id="msg">
+		</div>
+			<button onClick="back()">Back</button>
+		<script>
+			function back(){
+				window.location.href="index.html";
+				}
+			let msg=document.getElementById("msg");
+			let res=localStorage.getItem("res");
+			if(res===null)
+			{
+				msg.innerHTML="No result found. Redirecting to Home page...";
+				setTimeout(()=>{
+					window.location.href="index.html";
+			},3000);
+			}else{
+				msg.innerHTML=res;
+				}
+			
+
+		</script>
+	</body>
+</html>

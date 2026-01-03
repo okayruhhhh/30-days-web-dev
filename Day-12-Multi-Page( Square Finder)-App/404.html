@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Page Not Found|SQUARE FINDER</title>
+		<link rel="stylesheet" href="css/mystyle.css">
+	</head>
+	<body>
+		<div class="nav">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+		</div>
+	<br/>
+		<h1>PAGE NOT FOUND!</h1>
+	<br/>
+	<h3 id="msg">You will be redirected to home page in 5 seconds...</h3>
+	<p>OR <a href="index.html">Click here</a> to go back now.</p>
+	<script>
+		function goHome(){
+			window.location.href="index.html";
+		}
+		setTimeout(goHome,5000);
+	</script>
+	</body>
+</html>
