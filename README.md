@@ -20,8 +20,8 @@ learn by building, stay consistent, and improve one step at a time.
 - HTML  
 - CSS  
 - JavaScript  
-- React (later)  
-- MERN stack (later)
+- React  
+- MERN stack 
 
 
 ## 📁 Structure
