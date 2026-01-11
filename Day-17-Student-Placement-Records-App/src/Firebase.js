@@ -3,16 +3,17 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC3okto8Sz2JrxtQv7f_1ms4fOOD9xB76o",
-  authDomain: "refbssruh22-dec25.firebaseapp.com",
-  databaseURL: "https://refbssruh22-dec25-default-rtdb.firebaseio.com",
-  projectId: "refbssruh22-dec25",
-  storageBucket: "refbssruh22-dec25.firebasestorage.app",
-  messagingSenderId: "339365065798",
-  appId: "1:339365065798:web:03ab9f9815cbbd6d77c647"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
 const db=getDatabase(app);
+
 
 export default db;
